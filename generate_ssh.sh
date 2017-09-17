@@ -1,12 +1,6 @@
 # Get email from argument
 email=$1
 
-# We need sudo to do some stuff
-if [[ $EUID -ne 0 ]]; then
-   echo "Please run as root."
-   exit 1
-fi
-
 # Install xclip
 if [ ! -f /usr/bin/xclip ]; then
     sudo apt install xclip
