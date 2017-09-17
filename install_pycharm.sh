@@ -8,7 +8,7 @@ fi
 
 # Download Pycharm
 if [ ! -f /tmp/pycharm.tar.gz ]; then
-    wget -O /tmp/pycharm.tar.gz "https://download-cf.jetbrains.com/python/pycharm-professional-$version.tar.gz"
+    wget -O /tmp/pycharm.tar.gz "https://download.jetbrains.com/python/pycharm-professional-$version.tar.gz"
 fi
 
 #create JetBrains dir
