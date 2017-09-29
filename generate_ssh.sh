@@ -8,7 +8,7 @@ fi
 
 #make ssh dir
 if [ ! -d ~/.ssh ]; then
-    sudo mkdir ~/.ssh
+    mkdir ~/.ssh
 fi
 
 echo "=================================================================="
