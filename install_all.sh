@@ -12,6 +12,6 @@ read -p "enter email address" email
 ./install_chrome.sh
 ./install_pycharm.sh $pycharm_version
 
-./istall_knesset_dpp_deps.sh
+./install_knesset_dpp_deps.sh
 
 ./generate_ssh.sh $email

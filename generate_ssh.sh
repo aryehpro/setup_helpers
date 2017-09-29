@@ -6,6 +6,10 @@ if [ ! -f /usr/bin/xclip ]; then
     sudo apt install xclip
 fi
 
+#make ssh dir
+if [ ! -d ~/.ssh ]; then
+    sudo mkdir ~/.ssh
+
 echo "=================================================================="
 echo "==================== Generating SSH keys ========================="
 echo "=================================================================="
