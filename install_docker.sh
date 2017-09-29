@@ -7,7 +7,9 @@ fi
 # Get release name
 release_name=`lsb_release -cs`
 
-echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $release_name stable"
+echo "=================================================================="
+echo "===================== Installing Docker =========================="
+echo "=================================================================="
 
 # Set up the repository
 apt update
@@ -18,3 +20,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $r
 # Install docker CE
 apt update
 apt install docker-ce
+
+echo "=================================================================="
+echo "================= Finished installing Docker ====================="
+echo "=================================================================="

@@ -4,7 +4,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# Download Pycharm
+echo "=================================================================="
+echo "===================== Installing Chrome =========================="
+echo "=================================================================="
+
+# Download Chrome
 if [ ! -f /tmp/chrome.deb ]; then
     wget -O /tmp/chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 fi
@@ -13,3 +17,7 @@ fi
 dpkg -i /tmp/chrome.deb
 sudo apt install -f
 dpkg -i /tmp/chrome.deb
+
+echo "=================================================================="
+echo "================= Finished installing Chrome ====================="
+echo "=================================================================="

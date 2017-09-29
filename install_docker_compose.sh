@@ -7,6 +7,10 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+echo "=================================================================="
+echo "================= Installing Docker-compose ======================"
+echo "=================================================================="
+
 # Install docker-compose
 apt install docker-compose
 version=`docker-compose version --short`
@@ -20,3 +24,6 @@ if version_gt $min_version $version; then
     echo `docker-compose --version`
 fi
 
+echo "=================================================================="
+echo "============= Finished installing Docker-compose ================="
+echo "=================================================================="

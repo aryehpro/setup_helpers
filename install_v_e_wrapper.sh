@@ -6,6 +6,10 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+echo "=================================================================="
+echo "================ Installing VirtualEnvWrapper ===================="
+echo "=================================================================="
+
 # Install PIP
 if [ ! -f /usr/local/bin/pip ]; then
     wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/get-pip.py"
@@ -30,3 +34,7 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 
 # Update shell
 source ~/.bashrc
+
+echo "=================================================================="
+echo "============ Finished installing VirtualEnvWrapper ==============="
+echo "=================================================================="
