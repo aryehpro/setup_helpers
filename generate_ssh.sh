@@ -9,6 +9,7 @@ fi
 #make ssh dir
 if [ ! -d ~/.ssh ]; then
     sudo mkdir ~/.ssh
+fi
 
 echo "=================================================================="
 echo "==================== Generating SSH keys ========================="
