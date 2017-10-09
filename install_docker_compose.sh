@@ -2,7 +2,7 @@
 function version_gt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
 
 # We need sudo to do some stuff
-if [[ $EUID -ne 0 ]]; then
+if [ "${EUID}" != "0" ]; then
    echo "Please run as root."
    exit 1
 fi
@@ -12,7 +12,7 @@ echo "================= Installing Docker-compose ======================"
 echo "=================================================================="
 
 # Install docker-compose
-apt install docker-compose
+apt install -y docker-compose
 version=`docker-compose version --short`
 
 
